@@ -34,39 +34,24 @@ Hotel reservations often face cancellations, which impact revenue and resource p
 
 ## Architecture
 
-The project follows a modular, production-ready architecture:
+The project follows a modular, production-ready architecture with the following pipeline stages:
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  Data Sources                           │
-│          (CSV, APIs, Databases)                         │
-└─────────────────┬───────────────────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────────────────┐
-│           Data Ingestion & Validation                   │
-│  (Schema validation, Missing values, Type checking)     │
-└─────────────────┬───────────────────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────────────────┐
-│        Feature Engineering & Preprocessing              │
-│  (Scaling, Encoding, Feature creation)                  │
-└─────────────────┬───────────────────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────────────────┐
-│           Model Training & Evaluation                   │
-│  (Cross-validation, Hyperparameter tuning)              │
-└─────────────────┬───────────────────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────────────────┐
-│              Model Artifacts Storage                    │
-│  (Versioning, Registry, Metadata)                       │
-└─────────────────┬───────────────────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────────────────┐
-│        REST API & Web Application                       │
-│  (Flask, Docker, CI/CD Pipeline)                        │
-└─────────────────────────────────────────────────────────┘
-```
+**Data Pipeline:**
+- **Data Ingestion** → Load raw data from sources (CSV, APIs, Databases)
+- **Data Validation** → Schema validation, missing value checks, type verification
+- **Data Transformation** → Cleaning, normalization, and feature engineering
+- **Feature Preprocessing** → Scaling, encoding, and feature creation
+
+**Model Pipeline:**
+- **Model Training** → Train with cross-validation and hyperparameter tuning
+- **Model Evaluation** → Performance metrics (Accuracy, Precision, Recall, F1)
+- **Model Registry** → Version control and artifact storage
+
+**Deployment:**
+- **REST API** → Flask-based prediction endpoint
+- **Web UI** → User-friendly prediction interface
+- **Docker** → Containerized deployment
+- **CI/CD** → Automated testing and deployment pipeline
 
 ## Installation
 

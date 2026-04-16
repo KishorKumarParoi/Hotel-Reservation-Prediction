@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
-project_name = "hotel-reservation-prediction"
+project_name = "hotel_reservation_prediction"
 
 list_of_files = [
     ".gthub/workflows/.gitkeep",
