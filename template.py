@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
-project_name = "datascience"
+project_name = "hotel-reservation-prediction"
 
 list_of_files = [
     ".gthub/workflows/.gitkeep",
@@ -29,7 +29,7 @@ list_of_files = [
     "app.py",
     "requirements.txt",
     "READEME.md",
-    '.gitignore'
+    ".gitignore",
 ]
 
 
