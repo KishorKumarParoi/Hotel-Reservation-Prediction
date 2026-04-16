@@ -28,8 +28,9 @@ list_of_files = [
     "templates/index.html",
     "app.py",
     "requirements.txt",
-    "READEME.md",
+    "README.md",
     ".gitignore",
+    "LICENSE",
 ]
 
 
