@@ -28,12 +28,11 @@ build/
 
 # Data & Artifacts (ML-specific)
 data/
-artifacts/
-*.pkl
-*.joblib
-*.h5
-*.csv
-*.parquet
+artifacts/*
+!artifacts/models/
+!artifacts/models/lgbm_model.pkl
+!artifacts/processed/
+!artifacts/raw/
 
 # Logs
 logs/
